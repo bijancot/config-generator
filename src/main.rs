@@ -16,22 +16,23 @@ fn main() {
     let mut context = Context::new();
 
 
-    let text = r##"
-        panji
-        gateng 
-                    sdasd
-                    dadas
-                asdsad
-        dasd
-            dsd
-            - dsd
-            - sds 
-            - sdsd
-    "##;
+    // let text = r##"
+    //     panji
+    //     gateng 
+    //                 sdasd
+    //                 dadas
+    //             asdsad
+    //     dasd
+    //         dsd
+    //         - dsd
+    //         - sds 
+    //         - sdsd
+    // "##;
+    
     context.insert("name", "panji");
     context.insert("workplace", "detikcom");
     context.insert("website", "https://panjibaskoro.web.id");
-    context.insert("language", &text);
+    context.insert("language", "rust");
 
     let resu = tera.render("panji-template", &context);
 
