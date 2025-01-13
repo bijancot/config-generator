@@ -1,0 +1,6 @@
+{
+    "project_name": "sample-project",
+    "template": "nginx",
+    "domain_name": "panjibaskoro.web.id",
+    "directory": "/lorem/ipsum"
+}

@@ -1,19 +1,29 @@
+extern crate tera;
+
 use std::{fs, env};
 use tera::{Tera, Context};
 
 fn main() {
     let config_file = "/template/hello-world.txt.template";
+    let json_file = "/template/sample.json";
     let curr_dir = env::current_dir().unwrap().to_str().unwrap().to_string();
     let config_dir = curr_dir.to_string() + config_file;
+    let json_dir = curr_dir.to_string() + json_file;
     
     let mut tera = Tera::default();
 
     let data = fs::read_to_string(config_dir).expect("Unable to read file");
+    let json_data = fs::read_to_string(json_dir).expect("json issues");
 
     tera.add_raw_template("panji-template", &data).expect("something wrong from template");
     
     // let text = format!(r#"{}"#, data);
     let mut context = Context::new();
+
+
+    let test_json = json_data;
+
+    println!("{}",test_json.to_string());
 
 
     // let text = r##"
