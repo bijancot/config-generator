@@ -1,3 +1,0 @@
-hello my name panji
-i work at detikcom
-my website https://panjibaskoro.web.id written in rust
